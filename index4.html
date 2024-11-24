@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economía Lineal y Economía Circular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #18611a;
+            color: rgb(165, 165, 165);
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .mapa-conceptual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 1000px;
+            padding: 20px;
+            border-radius: 5px;
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .bloque {
+            background: #dde6df;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+            align-items: center;
+            border-radius: 5px;
+            width: 80%;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .bloque:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .titulo {
+            background-color: #1f7522;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            width: auto;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .titulo2 {
+            background-color: #1f7522;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            width: 500px;
+            margin-left: 125px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .contenido {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .createdby {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 10px 0 0 0;
+        }
+        .imgcircular {
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 70px;
+            height: 70px;
+            background-color: #001f01;
+            padding: 7px 7px;
+            border-radius: 15px 15px 15px 15px;
+        }
+        /* Animación para despliegue */
+        .contenido.mostrar {
+            display: block;
+            animation: desplegar 0.3s ease-out;
+        }
+        @keyframes desplegar {
+            from {
+                opacity: 0;
+                transform: scaleY(0);
+            }
+            to {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+        }
+    
+        .boton {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #884400;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .boton:hover {
+            background-color: #d07d2a;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Economía Circular
+    </header>
+    <div class="imgcircular">
+        <img src="png-clipart-recycle-logo-recycling-symbol-green-miscellaneous-symbols-removebg-preview.png" alt="Esquema de la economía lineal" style="height: 70px; width: 70px;">
+    </div>
+    <div class="mapa-conceptual">
+        <div class="bloque" onclick="toggleContenido(this)">
+            <div class="titulo">Economía Circular</div>
+            <div class="contenido">
+                Reflejan una toma de conciencia de que la economía no puede enfocarse solo en los beneficios económicos, y es preciso un enfoque mas centrado en el medio ambiente y en las personas.
+            </div>
+        </div>
+        
+        <div class="bloque" onclick="toggleContenido(this)">
+            <div class="titulo">Objetivos</div>
+            <div class="contenido">
+                Los gobiernos tienen un papel importante para propiciar el cambio de modelo económico. Por una parte, pueden promover el desarrollo económico sostenible, por otra pueden prohibir o limitar ciertas acciones y materiales.
+            </div>
+            
+            <div class="bloque" style="height: auto; width: auto;" onclick="toggleContenido(this)">
+                <div class="titulo2">Prohibir</div>
+                <div class="contenido">
+                    <ul>
+                        <li>Comportamientos dañinos para el medio ambiente.</li>
+                        <li>Uso de materiales y productos poco sostenibles.</li>
+                        <li>Limitación en la venta y Distribución de productos de plástico de un solo uso.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bloque" style="height: auto; width: auto;" onclick="toggleContenido(this)">
+                <div class="titulo2">Promover</div>
+                <div class="contenido">
+                    <ul>
+                        <li>Acciones legales y educativas de cuidado y protección del medio ambiente.</li>
+                        <li>Colaboración público-privada y sociedad civil para desarroyar alternativas.</li>
+                        <li>Campañas de sensibilización.</li>
+                        <li>Uso de materiales reciclados, reciclables y biodegradables.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bloque" onclick="toggleContenido(this)">
+            <div class="titulo">Las 3 R</div>
+            <div class="contenido">
+
+            </div>
+            <div class="bloque" onclick="toggleContenido(this)">
+                <div class="titulo2">Reducir</div>
+                <div class="contenido">
+                    <ul>
+                       <li>Minimizar la cantidad de materiales utilizados en la producción, como embalajes.</li>
+                       <li>Compra responsable, en lugar de compra compulsiva basada en caprichos.</li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="bloque" onclick="toggleContenido(this)">
+                <div class="titulo2">Reciclar</div>
+                <div class="contenido">
+                    <ul>
+                        <li>Depositar los desperdicios en lugares apropiados y no tirarlos en los ríos o a vertederos.</li>
+                        <li>Deshacerse correctamente de los desechos en su debido contenedor.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bloque" onclick="toggleContenido(this)">
+                <div class="titulo2">Reutilizar</div>
+                <div class="contenido">
+                    <ul>
+                        <li>Evitar el uso de piezas pequeñas o de componentes frágiles que se rompan fácilmente.</li>
+                        <li>Alargar la vida útil de los productos que nos resultan innecesarios, encontrandoles una nueva función.</li> 
+                    </ul>
+                </div>
+            </div>
+        </div>            
+            <a href="index3.html" class="boton">Volver a Economía Lineal</a>
+        </div>
+    <div class="createdby">
+        Hecho por Franco Ridel
+    </div>
+    <script>
+        function toggleContenido(element) {
+            const contenido = element.querySelector('.contenido');
+            contenido.classList.toggle('mostrar');
+        }
+    </script>
+</body>
+</html>

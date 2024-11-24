@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economía Lineal y Economía Circular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #884400;
+            color: rgb(165, 165, 165);
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .mapa-conceptual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 1000px;
+            padding: 20px;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .bloque {
+            background: #e8f5e9;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+            border-radius: 5px;
+            width: 80%;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .bloque:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .bloque .titulo {
+            background-color: #884400;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .contenido {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 10px 0 0 0;
+        }
+        /* Animación para despliegue */
+        .contenido.mostrar {
+            display: block;
+            animation: desplegar 0.3s ease-out;
+        }
+        @keyframes desplegar {
+            from {
+                opacity: 0;
+                transform: scaleY(0);
+            }
+            to {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+        }
+    
+        .boton {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #1f7622;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .boton:hover {
+            background-color: #388E3C;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Economía Lineal
+    </header>
+    <div class="mapa-conceptual">
+        <div class="image-container">
+            <img src="Economia_ lineal_esquema.png" alt="Esquema de la economía lineal">
+        </div>
+        <div class="bloque" onclick="toggleContenido(this)">
+            <div class="titulo">Concepto</div>
+            <div class="contenido">
+                Es el modelo tradicional en el que se fabrican productos, extrayendo materias primas, se extraen materias primas, se lleva a cabo el proceso de producción y distribución, y se desecha el producto sin tener en cuenta las consecuencias ambientales y sociales de este tipo de producción y consumo.
+            </div>
+        </div>
+        <div class="bloque" onclick="toggleContenido(this)">
+            <div class="titulo">Objetivos</div>
+            <div class="contenido">
+                <ul>
+                    <li>Buscar la eficiencia y maximizar el beneficio al menor costo.</li>
+                    <li>Obtener ganancias sin considerar el impacto ambiental y social.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bloque" onclick="toggleContenido(this)">
+            <div class="titulo">Efectos</div>
+            <div class="contenido">
+                <ul>
+                    <li>Deterioro medioambiental: contaminación, residuos.</li>
+                    <li>Impacto social: beneficios económicos, riesgos laborales.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bloque" onclick="toggleContenido(this)">
+            <div class="titulo">Fases</div>
+            <div class="contenido">
+                <ul>
+                    <li>Extracción de recursos: obtención de materias primas.</li>
+                    <li>Producción intensiva: requiere uso de energía.</li>
+                    <li>Distribución y consumo: transporte y embalajes.</li>
+                    <li>Eliminación de residuos: generación de basura y contaminación.</li>
+                </ul>
+            </div>
+        </div>
+        <a href="index4.html" class="boton">Economía Circular</a>
+    </div>
+    <footer>
+        Hecho por Franco Ridel
+    </footer>
+    <script>
+        function toggleContenido(element) {
+            const contenido = element.querySelector('.contenido');
+            contenido.classList.toggle('mostrar');
+        }
+    </script>
+</body>
+</html>
